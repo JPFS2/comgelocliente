@@ -175,9 +175,26 @@
                with font-awesome or any other icon font library -->
             <li class="nav-item">
               <a href="index.html" class="nav-link active">
+                <i class="nav-icon fas fa-th"></i>
+                <p>
+                  Catálogo
+                </p>
+              </a>
+            </li>
+            <li class="nav-header">Operações</li>
+            <li class="nav-item">
+              <a href="pages/operacoes/pedido.php" class="nav-link">
                 <i class="nav-icon fas fa-edit"></i>
                 <p>
                   Pedido
+                </p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="pages/operacoes/pedido.php" class="nav-link">
+                <i class="nav-icon fas fa-edit"></i>
+                <p>
+                  Comodato
                 </p>
               </a>
             </li>
@@ -220,12 +237,12 @@
                 <div class="inner">
                   <h3>1</h3>
 
-                  <p>Carrinho</p>
+                  <p>Carrinho de compras</p>
                 </div>
                 <div class="icon">
-                  <i class="ion ion-bag"></i>
+                  <i class="fas fa-shopping-cart"></i>
                 </div>
-                <a href="#" class="small-box-footer">Visualizar <i class="fas fa-arrow-circle-right"></i></a>
+                <a href="pages/operacoes/pedido.php" class="small-box-footer">Visualizar <i class="fas fa-arrow-circle-right"></i></a>
               </div>
             </div>
             <!-- ./col -->
@@ -269,7 +286,7 @@
             <div class="col-md-12">
                 <div class="card card-primary">
                     <div class="card-header">
-                        <h3 class="card-title">Digite seu pedido</h3>
+                        <h3 class="card-title">Adicionar no carrinho</h3>
 
                         <div class="card-tools">
                         </div>
@@ -301,38 +318,11 @@
                                     <input type="number" name="modelo" id="inputEstimatedBudget"
                                         class="form-control">
                                 </div>
-                            </div>
-
-                                <div class="col-6">
-                                    <div class="form-group">
-                                        <label for="inputEstimatedBudget">IMEI</label>
-                                        <input type="text" name="modelo" id="inputEstimatedBudget"
-                                            class="form-control">
-                                    </div>
-                                </div>
-                                <div class="col-3">
-                                    <div class="form-group">
-                                        <label for="inputEstimatedBudget">Armazenamento Interno</label>
-                                        <input type="text" name="armazenamento" class="form-control">
-                                    </div>
-                                </div>
-                                <div class="col-3">
-                                    <div class="form-group">
-                                        <label for="inputEstimatedBudget">Memória</label>
-                                        <input type="text" name="memoria" class="form-control">
-                                    </div>
-                                </div>
-
-                                <div class="col-1">
-                                    <div class="form-group">
-                                        <label for="inputEstimatedBudget">Quantidade</label>
-                                        <input type="text" name="memoria" class="form-control">
-                                    </div>
-                                </div>
+                              </div>
                                 </imput>
                                 <div class="col-12">
                                     <div class="form-group">
-                                        <input type="submit" value="Salvar"
+                                        <input type="submit" value="Adicionar +"
                                             class="btn btn-success float-right m-1">
                                     </div>
                                 </div>

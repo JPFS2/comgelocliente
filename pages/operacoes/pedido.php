@@ -1,28 +1,10 @@
-<?php 
-require '../../action/config.php';
-
-$lista = [];
-$sql = $pdo->query("SELECT * FROM fornecedor");
-
-if($sql->rowCount() ){
-    $lista = $sql->fetchAll(PDO::FETCH_ASSOC);
-}
-$listaa = [];
-$sql = $pdo->query("SELECT * FROM produto");
-
-if($sql->rowCount() ){
-    $listaa = $sql->fetchAll(PDO::FETCH_ASSOC);
-}
-
-
-?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>PDV | Entrada de mercadoria</title>
+    <title>LinkFacil | Pedido de mercadoria</title>
 
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet"
@@ -99,7 +81,7 @@ if($sql->rowCount() ){
             <a href="../../index.html" class="brand-link">
                 <img src="../../dist/img/Masterlogo2.jpg" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
                     style="opacity: .8">
-                <span class="brand-text font-weight-light">PDV</span>
+                <span class="brand-text font-weight-light">LinkFácil</span>
             </a>
 
             <!-- Sidebar -->
@@ -124,132 +106,31 @@ if($sql->rowCount() ){
                         data-accordion="false">
                         <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
-                        <li class="nav-item">
-                            <a href="../../index.html" class="nav-link active">
-                                <i class="nav-icon fas fa-tachometer-alt"></i>
-                                <p>
-                                    Dashboard
-                                </p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="nav-icon far fa-plus-square"></i>
-                                <p>
-                                    Cadastros
-                                    <i class="fas fa-angle-left right"></i>
-                                </p>
-                            </a>
-                            <ul class="nav nav-treeview">
-                                <li class="nav-item">
-                                    <a href="../forms/empresa.php" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Empresa</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="../forms/validation.php" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Usuários</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="../forms/clientes.php" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Clientes</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="../forms/produto.php" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Produtos</p>
-                                    </a>
-                                </li>
-
-                                <li class="nav-item">
-                                    <a href="../forms/fornecedor.php" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Fornecedores</p>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="nav-icon fas fa-edit"></i>
-                                <p>
-                                    Operações
-                                    <i class="fas fa-angle-left right"></i>
-                                </p>
-                            </a>
-                            <ul class="nav nav-treeview">
-                                <li class="nav-item">
-                                    <a href="entrada.php" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Entrada de mercadoria</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="#" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Venda de produtos</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="#" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Despesas</p>
-                                    </a>
-                                </li>
-
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a href="../trocas/trocasgarantias.html" class="nav-link">
-                                <i class="nav-icon fas fa-3x fa-sync-alt"></i>
-                                <p>
-                                    Trocas e Garantias
-                                </p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="nav-icon fas fa-chart-pie"></i>
-                                <p>
-                                    Relatórios
-                                    <i class="fas fa-angle-left right"></i>
-                                </p>
-                            </a>
-                            <ul class="nav nav-treeview">
-                                <li class="nav-item">
-                                    <a href="#" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Entrada de mercadoria</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="#" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Venda de produtos</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="#" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Despesas</p>
-                                    </a>
-                                </li>
-
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="nav-icon fas fa-inbox"></i>
-                                <p>
-                                    Caixa
-                                </p>
-                            </a>
-                        </li>
+               <li class="nav-item">
+              <a href="../../index.html" class="nav-link active">
+                <i class="nav-icon fas fa-th"></i>
+                <p>
+                  Catálogo
+                </p>
+              </a>
+            </li>
+            <li class="nav-header">Operações</li>
+            <li class="nav-item">
+              <a href="pedido.php" class="nav-link">
+                <i class="nav-icon fas fa-edit"></i>
+                <p>
+                  Pedido
+                </p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="pages/operacoes/pedido.php" class="nav-link">
+                <i class="nav-icon fas fa-edit"></i>
+                <p>
+                  Comodato
+                </p>
+              </a>
+            </li>
 
                     </ul>
                 </nav>
@@ -265,12 +146,12 @@ if($sql->rowCount() ){
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1>Entrada</h1>
+                            <h1>Pedido</h1>
                         </div>
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
                                 <li class="breadcrumb-item"><a href="../../index.html">Inicio</a></li>
-                                <li class="breadcrumb-item active">Entrada</li>
+                                <li class="breadcrumb-item active">Pedido</li>
                             </ol>
                         </div>
                     </div>
@@ -283,89 +164,88 @@ if($sql->rowCount() ){
                     <div class="col-md-12">
                         <div class="card card-primary">
                             <div class="card-header">
-                                <h3 class="card-title">Entrada de mercadoria</h3>
+                                <h3 class="card-title">Itens do pedido</h3>
 
                                 <div class="card-tools">
                                 </div>
                             </div>
-                            <form action="../../action/adicionarP.php" method="post">
+                            <form method="post">
                                 <div class="card-body">
-                                    <div class="row">
+                                  <div class = "row">
                                         <div class="col-6">
-                                            <div class="form-group">
-                                                <label for="inputEstimatedBudget">fornecedor</label>
-                                                <select name="cidade"
-                                                    class="form-control select2bs4 select2-hidden-accessible"
-                                                    style="width: 100%;" data-select2-id="21" tabindex="-1"
-                                                    aria-hidden="true">
-                                                    <?php foreach($lista as $fornecedor): ?>
-                                                    <option selected="selected" data-select2-id="23">
-                                                    <?= $fornecedor['codfornecedor']; ?> - <?= $fornecedor['razao']; ?> - <?= $fornecedor['cnpj']; ?></option>
-                                                    <?php endforeach; ?>
-                                                </select>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-3">
-                                            <div class="form-group">
-                                                <label for="inputEstimatedBudget">Tipo</label>
-                                                <select name="tipo"
-                                                    class="form-control select2bs4 select2-hidden-accessible"
-                                                    style="width: 100%;" data-select2-id="21" tabindex="-1"
-                                                    aria-hidden="true">
-                                                    <option selected="selected" data-select2-id="23">Celular</option>
-                                                    <option data-toggle-form-edit="#id-form" data-select2-id="42">
-                                                        Acessório</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="col-5">
                                             <div class="form-group">
                                                 <label for="inputEstimatedBudget">Produto</label>
-                                                <select name="cidade"
-                                                    class="form-control select2bs4 select2-hidden-accessible"
-                                                    style="width: 100%;" data-select2-id="21" tabindex="-1"
-                                                    aria-hidden="true">
-                                                    <?php foreach($listaa as $produto): ?>
-                                                    <option selected="selected" data-select2-id="23">
-                                                    <?= $produto['codproduto']; ?> -    
-                                                    <?= $produto['descricao']; ?>
-                                                        <?= $produto['modelo']; ?></option>
-                                                    <?php endforeach; ?>
-                                                </select>
+                                                <input type="text" name="modelo" id="inputEstimatedBudget"
+                                                    class="form-control" readonly>
                                             </div>
                                         </div>
+                                        <div class="col-2">
+                                            <div class="form-group">
+                                                <label for="inputEstimatedBudget">Quantidade</label>
+                                                <input type="number" name="armazenamento" class="form-control">
+                                            </div>
+                                        </div>
+                                        
+                                        </imput>
+                                    </div>
+
+                                </div>
+                            </form>
+
+                        </div>
+                        <!-- /.card -->
+                    </div>
+                </div>
+            </section>
+            <section class="content">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card card-primary">
+                            <div class="card-header">
+                                <h3 class="card-title">Local de entrega</h3>
+
+                                <div class="card-tools">
+                                </div>
+                            </div>
+                            <form method="post">
+                                <div class="card-body">
+                                  <div class = "row">
                                         <div class="col-6">
                                             <div class="form-group">
-                                                <label for="inputEstimatedBudget">IMEI</label>
+                                                <label for="inputEstimatedBudget">Endereço</label>
                                                 <input type="text" name="modelo" id="inputEstimatedBudget"
                                                     class="form-control">
                                             </div>
                                         </div>
-                                        <div class="col-3">
+                                        <div class="col-2">
                                             <div class="form-group">
-                                                <label for="inputEstimatedBudget">Armazenamento Interno</label>
-                                                <input type="text" name="armazenamento" class="form-control">
+                                                <label for="inputEstimatedBudget">Número</label>
+                                                <input type="number" name="armazenamento" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-3">
                                             <div class="form-group">
-                                                <label for="inputEstimatedBudget">Memória</label>
+                                                <label for="inputEstimatedBudget">Bairro</label>
                                                 <input type="text" name="memoria" class="form-control">
                                             </div>
                                         </div>
 
+                                        <div class="col-3">
+                                            <div class="form-group">
+                                                <label for="inputEstimatedBudget">Cidade</label>
+                                                <input type="text" name="memoria" class="form-control">
+                                            </div>
+                                        </div>
                                         <div class="col-1">
                                             <div class="form-group">
-                                                <label for="inputEstimatedBudget">Quantidade</label>
+                                                <label for="inputEstimatedBudget">UF</label>
                                                 <input type="text" name="memoria" class="form-control">
                                             </div>
                                         </div>
                                         </imput>
                                         <div class="col-12">
                                             <div class="form-group">
-                                                <input type="submit" value="Salvar"
+                                                <input type="submit" value="Finalizar"
                                                     class="btn btn-success float-right m-1">
                                             </div>
                                         </div>
@@ -391,7 +271,7 @@ if($sql->rowCount() ){
         <div class="float-right d-none d-sm-block">
 
         </div>
-        <strong>Copyright &copy; 2023 <a href="#">PDV</a>.</strong> Todos os direitos reservados
+        <strong>Copyright &copy; 2023 <a href="#">LinkFácil</a>.</strong> Todos os direitos reservados
     </footer>
 
     <!-- Control Sidebar -->
