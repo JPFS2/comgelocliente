@@ -106,31 +106,31 @@
                         data-accordion="false">
                         <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
-               <li class="nav-item">
-              <a href="../../index.html" class="nav-link active">
-                <i class="nav-icon fas fa-th"></i>
-                <p>
-                  Catálogo
-                </p>
-              </a>
-            </li>
-            <li class="nav-header">Operações</li>
-            <li class="nav-item">
-              <a href="pedido.php" class="nav-link">
-                <i class="nav-icon fas fa-edit"></i>
-                <p>
-                  Pedido
-                </p>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="pages/operacoes/pedido.php" class="nav-link">
-                <i class="nav-icon fas fa-edit"></i>
-                <p>
-                  Comodato
-                </p>
-              </a>
-            </li>
+                        <li class="nav-item">
+                            <a href="../../index.html" class="nav-link active">
+                                <i class="nav-icon fas fa-th"></i>
+                                <p>
+                                    Catálogo
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-header">Operações</li>
+                        <li class="nav-item">
+                            <a href="pedido.php" class="nav-link">
+                                <i class="nav-icon fas fa-edit"></i>
+                                <p>
+                                    Pedido
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/operacoes/pedido.php" class="nav-link">
+                                <i class="nav-icon fas fa-edit"></i>
+                                <p>
+                                    Comodato
+                                </p>
+                            </a>
+                        </li>
 
                     </ul>
                 </nav>
@@ -171,23 +171,77 @@
                             </div>
                             <form method="post">
                                 <div class="card-body">
-                                  <div class = "row">
-                                        <div class="col-6">
+                                    <div class="row">
+                                        <div class="col-7">
                                             <div class="form-group">
-                                                <label for="inputEstimatedBudget">Produto</label>
+                                                <label for="inputEstimatedBudget">Produtos</label>
                                                 <input type="text" name="modelo" id="inputEstimatedBudget"
-                                                    class="form-control" readonly>
+                                                    class="form-control" placeholder="Gelo escama" readonly>
                                             </div>
                                         </div>
                                         <div class="col-2">
                                             <div class="form-group">
-                                                <label for="inputEstimatedBudget">Quantidade</label>
+                                                <label for="inputEstimatedBudget">Valor</label>
+                                                <input type="number" name="modelo" id="inputEstimatedBudget"
+                                                    class="form-control" readonly>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-2">
+                                            <div class="form-group">
+                                                <label for="inputEstimatedBudget">Quantidades</label>
                                                 <input type="number" name="armazenamento" class="form-control">
                                             </div>
                                         </div>
-                                        
+
+                                        </imput>
+
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-7">
+                                            <div class="form-group">
+                                                <input type="text" name="modelo" id="inputEstimatedBudget"
+                                                    class="form-control" placeholder="Gelo tubo" readonly>
+                                            </div>
+                                        </div>
+                                        <div class="col-2">
+                                            <div class="form-group">
+                                                <input type="number" name="modelo" id="inputEstimatedBudget"
+                                                    class="form-control" readonly>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-2">
+                                            <div class="form-group">
+                                                <input type="number" name="armazenamento" class="form-control">
+                                            </div>
+                                        </div>
+
                                         </imput>
                                     </div>
+                                    <div class="row">
+                                        <div class="col-7">
+                                            <div class="form-group">
+                                                <input type="text" name="modelo" id="inputEstimatedBudget"
+                                                    class="form-control" placeholder="Gelo barra" readonly>
+                                            </div>
+                                        </div>
+                                        <div class="col-2">
+                                            <div class="form-group">
+                                                <input type="number" name="modelo" id="inputEstimatedBudget"
+                                                    class="form-control" readonly>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-2">
+                                            <div class="form-group">
+                                                <input type="number" name="armazenamento" class="form-control">
+                                            </div>
+                                        </div>
+
+                                        </imput>
+                                    </div>
+
 
                                 </div>
                             </form>
@@ -209,7 +263,7 @@
                             </div>
                             <form method="post">
                                 <div class="card-body">
-                                  <div class = "row">
+                                    <div class="row">
                                         <div class="col-6">
                                             <div class="form-group">
                                                 <label for="inputEstimatedBudget">Endereço</label>
@@ -223,7 +277,7 @@
                                                 <input type="number" name="armazenamento" class="form-control">
                                             </div>
                                         </div>
-                                        <div class="col-3">
+                                        <div class="col-4">
                                             <div class="form-group">
                                                 <label for="inputEstimatedBudget">Bairro</label>
                                                 <input type="text" name="memoria" class="form-control">
@@ -243,11 +297,20 @@
                                             </div>
                                         </div>
                                         </imput>
-                                        <div class="col-12">
-                                            <div class="form-group">
-                                                <input type="submit" value="Finalizar"
-                                                    class="btn btn-success float-right m-1">
-                                            </div>
+
+                                    </div>
+                                    <div class="bg-gray py-2 px-3 mt-4">
+                                        <h2 class="mb-0">
+                                            R$ 80.00
+                                        </h2>
+                                        <h4 class="mt-0">
+                                            <small>Total com taxa: R$80.00 </small>
+                                        </h4>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-group">
+                                            <input type="submit" value="Finalizar"
+                                                class="btn btn-success float-right m-1">
                                         </div>
                                     </div>
 
@@ -261,7 +324,7 @@
             </section>
             <!-- /.content -->
 
-          
+
             <!-- /.content-wrapper -->
             <!-- /.content -->
         </div>
